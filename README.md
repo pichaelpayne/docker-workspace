@@ -8,6 +8,7 @@ This will build a docker image based on `fedora:latest` and with the right `dock
 - Local executable or script to launch and manage container
 - Customizable timezone (currently EST)
 - Not requiring an initial `aws configure` run before utilizing awscli. 
+- Drop user in usernamed account rather than root. 
 
 
 # Requirements
@@ -47,7 +48,9 @@ Also note this will be running in daemon mode so you will not immediately drop i
 
 `--name` & `--hostname` You can set this to whatever you like.
 
-## Note on Run
+## Notes on Run
+You'll drop in as root - you should su into your "username" you set - this is where your hoemfolder will be. `$ su - username`
+
 Sharing your entire home directory has some security implications better understood in official documentation on sharing directories on Windows hosts with linux containers. Do so at your own risk.
 
 You can make your blast radius smaller by using multiple `-v` volume mount flags in your run command to only share specific files or directories. 
