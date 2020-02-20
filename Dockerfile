@@ -8,7 +8,9 @@ RUN dnf update -y && \
 	pip3 install boto3 awscli && \
 	pip3 install --upgrade git+git://github.com/Nike-Inc/gimme-aws-creds.git && \
 	ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime && \
-	systemctl enable ntpdate.service 
+	systemctl enable ntpdate.service && \
+	curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/linux_64bit/session-manager-plugin.rpm" -o "session-manager-plugin.rpm" && \
+	yum install -y session-manager-plugin.rpm
 
 RUN adduser -m $username && \
 	usermod -aG wheel $username &&\

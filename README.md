@@ -7,6 +7,7 @@ This will build a docker image based on `fedora:latest` and with the right `dock
 - Terraform 11.11 & 12:latest
 - Local executable or script to launch and manage container
 - Customizable timezone (currently EST)
+- Not requiring an initial `aws configure` run before utilizing awscli. 
 
 
 # Requirements
