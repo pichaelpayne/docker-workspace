@@ -79,7 +79,7 @@ ee00ab8bb916        privo               "/bin/bash"         6 days ago          
 
 ```
 >docker attach e
-user@docker docker-workspace]$
+[user@docker docker-workspace]$
 ```
 
 If you make changes to your container and want to save it as a new version of your image. You can run :
