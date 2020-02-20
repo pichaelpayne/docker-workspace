@@ -27,15 +27,15 @@ This will build a docker image based on `fedora:latest` and with the right `dock
 
 `docker build --build-arg username=userNAME -t imageNAME .` 
 
-"*userNAME*" is the name you wish to give your local user.
-"*imageNAME*" is the name you wish to give your image.
+- "*userNAME*" is the name you wish to give your local user.
+- "*imageNAME*" is the name you wish to give your image.
 
 
 ## Note on Build
 If you run `docker images` and your image is not named correctly, you can fix this by running :
 `docker tag HASH imageNAME:latest`
 
-"*HASH*" is going to be the unique id for your image. 
+- "*HASH*" is going to be the unique id for your image. 
 
 
 # Run
