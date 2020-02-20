@@ -8,6 +8,7 @@ This will build a docker image based on `fedora:latest` and with the right `dock
 - Local executable or script to launch and manage container
 - Customizable timezone (currently EST)
 
+
 # Requirements
 - Latest docker-ce for Windows
 - A configured `.okta_aws_login_config` in the src folder
@@ -15,6 +16,7 @@ This will build a docker image based on `fedora:latest` and with the right `dock
 ## Recommended
 - awscli for Windows configured with at least a region and default output format.
 - Powershell 6
+
 
 # Build
 - Clone this repository locally. 
@@ -33,6 +35,7 @@ If you run `docker images` and your image is not named correctly, you can fix th
 
 "*HASH*" is going to be the unique id for your image. 
 
+
 # Run
 
 To run and also mount your local Windows home directory for your container, be sure to first enable sharing from your Docker preferences for your C: drive.
@@ -47,6 +50,7 @@ Also note this will be running in daemon mode so you will not immediately drop i
 Sharing your entire home directory has some security implications better understood in official documentation on sharing directories on Windows hosts with linux containers. Do so at your own risk.
 
 You can make your blast radius smaller by using multiple `-v` volume mount flags in your run command to only share specific files or directories. 
+
 
 # Maintain
 
