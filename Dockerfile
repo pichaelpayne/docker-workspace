@@ -3,7 +3,7 @@ FROM fedora
 ARG username
 
 RUN dnf update -y && \
-	dnf -y install tmux wget vim openssh-clients python3 git whois bind-utils nmap ntpdate unzip net-tools iputils && \
+	dnf -y install tmux wget vim openssh-clients python3 git whois bind-utils nmap ntpdate unzip net-tools iputils openvpn && \
 	dnf -y groupinstall 'Development Tools' && \
 	pip3 install boto3 awscli && \
 	pip3 install --upgrade git+git://github.com/Nike-Inc/gimme-aws-creds.git && \
