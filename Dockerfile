@@ -7,7 +7,7 @@ RUN dnf update -y && \
 	dnf -y groupinstall 'Development Tools' && \
 	pip3 install boto3 awscli && \
 	pip3 install --upgrade git+git://github.com/Nike-Inc/gimme-aws-creds.git && \
-	npm install -g aws-cdk
+	# npm install -g aws-cdk \
 	ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime && \
 	systemctl enable ntpdate.service && \
 	curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/linux_64bit/session-manager-plugin.rpm" -o "session-manager-plugin.rpm" && \
